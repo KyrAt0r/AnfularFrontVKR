@@ -1,10 +1,11 @@
 body{
     
     margin: 0;
-    font-family: helveticaneuecoub-normal, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
 }
 
 h1{
+    font-family: 'Fira Sans', sans-serif;
     font-size: 32px;
     display: block;
     margin-block-start: 0.67em;
@@ -91,7 +92,7 @@ input{
 .input1{
     width: 100%;
     position: relative;
-    font-family: helveticaneuecoub-normal, Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Fira Sans', sans-serif;
     font-weight: 400;
     padding: 10px 0px;
     margin: 0px;
@@ -104,21 +105,8 @@ input{
     color: #000000;
 }
 
-.login-submit{
-    padding: 0px 30px;
-    float: right;
-    width: 160px;
-    position: relative;
-
-    background-color: #0332FF;
-    color: #FFFFFF;
-
-    font-family: Helvetica, Arial, "Lucida Grande", sans-serif;
-    font-weight: bold;
-    -webkit-appearance: none;
-    height: 40px;
-    font-size: 1rem;
-    line-height: 41px;
+.input1:focus{
+    outline: none;
 }
 
 .myButton{
@@ -126,6 +114,8 @@ input{
     height: 50px;
     float: right;
     position: relative;
+    font-family: 'Fira Sans', sans-serif;
+    font-style: bold;
     border-radius: 20px;
     padding: 0px 30px;
     background-color: #f0f0f3;
@@ -140,3 +130,4 @@ input{
     -moz-box-shadow: 10px 10px 30px 0px #d1d9e6 inset, -10px -10px 30px 0px #ffffff inset;
     box-shadow: 10px 10px 30px 0px #d1d9e6 inset, -10px -10px 30px 0px #ffffff inset;
 }
+

@@ -4,17 +4,37 @@
             <div class="wrap-login">
                 <div class="login-form">
                     <h1 class="login-title">
-                        Войти
+                        Авторизация
                     </h1>
-                    <form>
+                    <form action="singin">
                         <div class="wrap-input">
-                            <input class="input1 typ1" type="email" name="email" placeholder="Email">
-                            <input class="input1 typ2" type="password" name="password" placeholder="Password">
+                            <input class="input1 typ1" type="login" name="login" placeholder="Логин">
+                            <input class="input1 typ2" type="password" name="password" placeholder="Пароль">
                         </div>
+                        <button>Google</button>
                         <button type="submit" class="myButton"> Войти</button>
+
                     </form>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    async function singin(login, password) {
+    const response = await fetch("api/account/login", {
+        method: "POST",
+        headers: { "Accept": "application/json", "Content-Type": "application/json" },
+        body: JSON.stringify({
+            login: login,
+            password: password,
+        })
+    });
+    if (response.ok === true) {
+        const user = await response.json();
+        reset();
+        document.querySelector("tr[data-rowid='" + user.id + "']").replaceWith(row(user));
+    }
+}
+
+</script>
