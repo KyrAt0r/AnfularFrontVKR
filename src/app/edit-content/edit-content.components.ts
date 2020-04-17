@@ -1,8 +1,15 @@
-import { Component} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-edit-page',
-  templateUrl: './edit-page.component.html',
-  styleUrls: ['./edit-page.component.css']
+  selector: 'app-edit-content',
+  templateUrl: './edit-content.components.html',
+  styleUrls: ['./edit-content.components.css']
 })
-export class EditContentPageComponent {}
+export class ECPComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+}
