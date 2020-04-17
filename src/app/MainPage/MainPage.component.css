@@ -1,5 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
-body {
+.body {
+    position: fixed;
+    top: -20px;
+    left: -19px;
+    width: 101%;
+    height: 110%;
     background: #757575;
 }
 
@@ -7,12 +12,12 @@ body {
 
 .left_menu{
     z-index: 3;
-    position: absolute;
+    position: fixed;
     left: 0px;
     top: 0px;
     width: 70px;
     height: 100%;
-    background: #555555;
+    background: #4b4b4b;
 }
 .left_menu:hover{
     width: 150px;
@@ -69,7 +74,7 @@ img{
  z-index: 2;
     position: absolute;
     left: 85%;
-    top: 10px;
+    top: 20px;
     width: 13%;
     height: 62px;
     border-radius: 10px;
