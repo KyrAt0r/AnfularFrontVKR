@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -6,4 +6,10 @@ import {Component} from '@angular/core'
     templateUrl: './MainPage.component.html',
     styleUrls: ['./MainPage.component.css']
 })
-export class MainPageComponent {}
+export class MainPageComponent implements OnInit{
+    
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+}

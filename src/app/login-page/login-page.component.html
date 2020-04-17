@@ -1,5 +1,10 @@
+<head>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="751697380175 - 9glb0n13u6sa6jpus75sd65q71nf8rj2.apps.googleusercontent.com.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
 <body>
-    <div class="limiter">
+        <div class="limiter">
         <div class="login-cont">
             <div class="wrap-login">
                 <div class="login-form">
@@ -8,10 +13,10 @@
                     </h1>
                     <form action="singin">
                         <div class="wrap-input">
-                            <input class="input1 typ1" type="login" name="login" placeholder="Логин">
+                            <input class="input1 typ1" type="login" name="username" placeholder="Логин">
                             <input class="input1 typ2" type="password" name="password" placeholder="Пароль">
                         </div>
-                        <button>Google</button>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
                         <button type="submit" class="myButton"> Войти</button>
 
                     </form>
@@ -20,21 +25,3 @@
         </div>
     </div>
 </body>
-<script>
-    async function singin(login, password) {
-    const response = await fetch("api/account/login", {
-        method: "POST",
-        headers: { "Accept": "application/json", "Content-Type": "application/json" },
-        body: JSON.stringify({
-            login: login,
-            password: password,
-        })
-    });
-    if (response.ok === true) {
-        const user = await response.json();
-        reset();
-        document.querySelector("tr[data-rowid='" + user.id + "']").replaceWith(row(user));
-    }
-}
-
-</script>
