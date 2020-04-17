@@ -11,7 +11,6 @@ import { MainPageComponent } from './MainPage/MainPage.component';
 import { ECPComponent } from './edit-content/edit-content.components'
 import { NewServiceService } from './new-service.service';
 import { HttpClient } from '@angular/common/http';
-import { from } from 'rxjs';
 
 
 const routes: Routes = [
@@ -36,4 +35,4 @@ const routes: Routes = [
   providers: [NewServiceService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {  }
